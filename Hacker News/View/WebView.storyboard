@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vNa-EZ-vEV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="jc2-Oa-Hdc">
+            <objects>
+                <viewController id="vNa-EZ-vEV" customClass="WebViewController" customModule="Hacker_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKS-aF-es9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ae-1Y-DNc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.95404809710000005" green="0.45481616260000002" blue="0.117410548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5ae-1Y-DNc" firstAttribute="trailing" secondItem="0qM-j0-UQx" secondAttribute="trailing" id="14f-55-KTf"/>
+                            <constraint firstAttribute="bottom" secondItem="5ae-1Y-DNc" secondAttribute="bottom" id="PEl-iw-kRm"/>
+                            <constraint firstItem="5ae-1Y-DNc" firstAttribute="top" secondItem="0qM-j0-UQx" secondAttribute="top" id="gFw-Ar-JrT"/>
+                            <constraint firstItem="5ae-1Y-DNc" firstAttribute="leading" secondItem="0qM-j0-UQx" secondAttribute="leading" id="iTP-gc-yiL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0qM-j0-UQx"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem enabled="NO" title="Item" image="chevron.left" catalog="system" id="TlL-xL-C4R"/>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="yDZ-fi-V9Z"/>
+                        <barButtonItem enabled="NO" title="Item" image="chevron.right" catalog="system" id="9Xf-lM-Zra"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Cc9-eo-1sb"/>
+                        <barButtonItem title="Item" image="arrow.clockwise" catalog="system" id="SDQ-Hj-tny">
+                            <color key="tintColor" red="0.95404809710000005" green="0.45481616260000002" blue="0.117410548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem width="48" style="plain" systemItem="fixedSpace" id="mrc-4x-mqp"/>
+                        <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="I7e-Z3-h79"/>
+                        <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="qsx-Hb-NeX">
+                            <color key="tintColor" red="0.95404809710000005" green="0.45481616260000002" blue="0.117410548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="b8h-zy-sFN"/>
+                        <barButtonItem title="Item" image="message" catalog="system" springLoaded="YES" id="19W-OI-GU7">
+                            <color key="tintColor" red="0.95404809710000005" green="0.45481616260000002" blue="0.117410548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="0A4-7E-F92"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="5ae-1Y-DNc" id="lop-xo-flv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRa-Nq-e09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1747.826086956522" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
+        <image name="message" catalog="system" width="64" height="56"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
+</document>
