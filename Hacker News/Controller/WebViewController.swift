@@ -22,7 +22,6 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadWebView()
-        UIApplication().
     }
     
     fileprivate func loadWebView() {
