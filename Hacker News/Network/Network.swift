@@ -11,8 +11,8 @@ import Alamofire
 
 class Network {
     
-    static func fetch<T: Decodable>(_ url: String, completion: @escaping (Swift.Result<T, Error>) -> Void) {
-        
+    func fetch<T: Decodable>(_ url: String, completion: @escaping (Swift.Result<T, Error>) -> Void) {
+      
         AF.request(url).response { (response) in
             
             do {
@@ -26,6 +26,6 @@ class Network {
         }
     }
     
-    
-    
 }
+
+extension Network: APIProtocol { }

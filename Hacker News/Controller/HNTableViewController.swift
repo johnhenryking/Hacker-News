@@ -13,6 +13,7 @@ class HNTableViewController: UITableViewController {
     var stories = [Story]()
     let reuseIdentifier = "hackerNewsCell"
     
+    lazy var network = Network()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class HNTableViewController: UITableViewController {
         
         let url = APIRouter.url(for: .topStories)
         
-        Network.fetch(url) { [unowned self] (result: Result<[Int], Error>) in
+        network.fetch(url) { [unowned self] (result: Result<[Int], Error>) in
             switch result {
             case .success(let stories):
                 let limit = 10 // amount of stories you would like displayed
@@ -43,14 +44,12 @@ class HNTableViewController: UITableViewController {
         
         let url = APIRouter.url(for: .story, with: id)
         
-        Network.fetch(url) { [unowned self] (result: Result<Story, Error>) in
+        network.fetch(url) { [unowned self] (result: Result<Story, Error>) in
             switch result {
             case .success(let story):
                 self.tableView.beginUpdates()
-                
                 self.stories.insert(story, at: 0)
                 self.tableView.insertRows(at:[ [0,0]], with: .automatic)
-                
                 self.tableView.endUpdates()
             case .failure(let error):
                 print(error.localizedDescription)

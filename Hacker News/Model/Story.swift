@@ -15,7 +15,6 @@ struct Story: Decodable {
     var id: Int
     var kids: [Int]
     var score: Int
-    var time: Date
     var title: String
     var type: String
     var url: String
